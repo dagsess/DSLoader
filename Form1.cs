@@ -69,7 +69,7 @@ namespace DSLoader
             button2.Enabled = false;
             if(int.TryParse(comboBox2.Text, out int baudRate))
             {
-                toolStripStatusLabel1.Text = $"Попытка открыть открыть порт {cbSerialPortNames.Text}...";
+                toolStripStatusLabel1.Text = $"Попытка открыть порт {cbSerialPortNames.Text}...";
                 serialInterface = new SerialInterface(cbSerialPortNames.Text, baudRate);
                 var result = await serialInterface.OpenInterface();
 
